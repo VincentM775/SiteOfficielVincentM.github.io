@@ -1,0 +1,21 @@
+section article #TITREDuCorps
+{
+    color: black;
+    font-size: 1.6em;
+    padding: 1%;
+    padding-bottom: 2px;
+    border-bottom: 3px solid black;
+}
+section article #TITRErubrique
+{
+    color: black;
+    font-size: 1.3em;
+}
+section article #RUBRIQUE
+{
+    color: black;
+    font-size:  1.5em;
+    text-align: justify;
+    text-justify:inter-word;
+
+}
