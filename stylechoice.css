@@ -1,0 +1,36 @@
+body{
+    background: #141b29;
+    margin: 0;
+}
+h1{
+    color: white;
+    font-family:cursive;
+    text-align: center;
+    margin-top: 5%;
+    font-size:50px;
+    text-decoration: underline;
+}
+.conteneur{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.box img{
+    position: relative;
+    width: 250px;
+}
+.box h2{
+    color: white;
+    text-align: center;
+}
+section a{
+    text-decoration: none;
+}
+.box{
+    background-color: #1c263a;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
