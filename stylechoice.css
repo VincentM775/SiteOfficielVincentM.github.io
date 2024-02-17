@@ -42,5 +42,6 @@ section a{
 }
 .box:hover{
     background-color: #314263;
+    padding: 30px;
     transition: 0.4s;
 }
