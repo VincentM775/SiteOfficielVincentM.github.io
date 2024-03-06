@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #001023;
+    font-family:cursive;
+}
+.fondFlou{
+    position: fixed;
+    backdrop-filter: blur(15px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    font-size: 22px;
+}
+#titreHeader{
+    margin: 0;
+    color: white;
+}
+.textNav{
+    text-decoration: none;
+    color: rgb(188, 188, 188);
+    transition: 0.2s;
+}
+.textNav:hover{
+    color: rgb(255, 255, 255);
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 850px;
+    padding-right: 15px;
+}
+
+section{
+    width: 100%;
+}
+#section1{
+    background-image: url(images/pexels-nemuel-sereti-6424590.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    
+}
+h1{
+    margin: 0;
+    color: white;
+    font-size: 40px;
+}
+#titreExplicative{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    padding-left: 50px;
+}
+#titreExplicative p{
+    font-size: 20px;
+}
+#section2{
+    height: 100vh;
+    
+}
