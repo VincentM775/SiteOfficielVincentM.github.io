@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="google-site-verification" content="44yDus8rfzvEHwkA6YrQR6Ja2Y2ntilaUrVatV0ZAnE" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vincent MATIAS - Étudiant 1ère année en BUT Informatique</title>
     <link rel="stylesheet" href="accueil.css">
-    <script src="js.js"></script>
+    
 </head>
 <body>
-    <header class="fondFlou">
-        <h2><a class="textNav" href="#" id="titreHeader">VMatias</a></h2>
+    <header class="fondFlou" id="top">
+        <h2><a class="textNav" href="#top" id="titreHeader">VMatias</a></h2>
         <nav>
-              <a class="textNav" href="#2">Compétences</a>
-              <a class="textNav" href="#">Projets</a>
-              <a class="textNav" href="#">Formations</a>
-              <a class="textNav" href="#">Expériences</a>
-              <a class="textNav" href="#">Centres d'intérêt</a>
-              <a class="textNav" href="#">Contact</a>
+              <a class="textNav" href="#competences">Compétences</a>
+              <a class="textNav" href="#projet">Projets</a>
+              <a class="textNav" href="#projets">Formations</a>
+              <a class="textNav" href="#experiences">Expériences</a>
+              <a class="textNav" href="#centreInteret">Centres d'intérêt</a>
+              <a class="textNav" href="/contact.html">Contact</a>
 
         </nav>
     </header>
@@ -59,7 +60,7 @@
         </section>
         <hr>
         <section id="competences">
-            <article>
+            <article class="rubrique">
                 <h2 class="titreRubrique">MES COMPÉTENCES</h2>
                 <div id="conteneur-box">
                     <div class="box"><img src="iconCompetences/html.png" alt="icon HTML"><p>HTML</p></div>
@@ -88,17 +89,18 @@
         </section>
         <hr>
         <section id="projets">
-            <h2 class="titreRubrique">MES PROJETS</h2>
-            <article>
-                <div class="box">
-
+            <article class="rubrique">
+                <h2 class="titreRubrique">MES PROJETS</h2>
+                <div class="conteneur-box-projet">
+                    <div id="projet1"></div>
+                    <p>Mini Facemate</p>
                 </div>
             </article>
         </section>
         <hr>
         <section id="formations">
-            <h2 class="titreRubrique">MES FORMATIONS</h2>
-            <article>
+            <article class="rubrique">
+                <h2 class="titreRubrique">MES FORMATIONS</h2>
                 <div class="box">
 
                 </div>
@@ -106,8 +108,8 @@
         </section>
         <hr>
         <section id="experiences">
-            <h2 class="titreRubrique">MES EXPÉRIENCES</h2>
-            <article>
+            <article class="rubrique">
+                <h2 class="titreRubrique">MES EXPÉRIENCES</h2>
                 <div class="box">
 
                 </div>
@@ -115,8 +117,9 @@
         </section>
         <hr>
         <section id="centreInteret">
-            <h2 class="titreRubrique">MES CENTRES D'INTERÊTS</h2>
-            <article>
+           
+            <article class="rubrique"> 
+                <h2 class="titreRubrique">MES CENTRES D'INTERÊTS</h2>
                 <div class="box">
 
                 </div>
@@ -126,5 +129,6 @@
     <footer>
         <p>Vincent Matias &copy 2024 - Tous droits réservés</p>
     </footer>
+    <script src="js.js"></script>
 </body>
 </html>
