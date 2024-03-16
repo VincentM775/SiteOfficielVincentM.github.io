@@ -42,7 +42,7 @@
                         <div class="field" id="fieldNom">
                             <label class="label">Nom :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input name="lastname" id="formNom" class="input is-danger" type="text" placeholder="Exemple : Matias"required>
+                                <input name="nom" id="formNom" class="input is-danger" type="text" placeholder="Exemple : Matias"required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                 </span>
@@ -56,7 +56,7 @@
                         <div class="field" id="fieldPrenom">
                             <label class="label">Prénom :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input name="firstname" id="formPrenom" class="input is-danger" type="text" placeholder="Exemple : Vincent"required>
+                                <input name="prenom" id="formPrenom" class="input is-danger" type="text" placeholder="Exemple : Vincent"required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                 </span>
@@ -84,7 +84,7 @@
                         <div class="field" id="fieldSujet">
                             <label class="label">Sujet :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input name="subject" id="formSujet" class="input is-danger" type="text" placeholder="Exemple : Recrutement alternance" required>
+                                <input name="sujet" id="formSujet" class="input is-danger" type="text" placeholder="Exemple : Recrutement alternance" required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-envelope"></i>
                                 </span>

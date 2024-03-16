@@ -16,10 +16,11 @@ if(isset($_POST['submit'])){
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $email = $_POST['email'];
+$sujetMes = $_POST['sujet'];
 $message = $_POST['message'];
 
 $destinataire = 'vincentmts77@gmail.com';
-$sujet = 'SITE WEB : Nouveau message';
+$sujet = "SITE WEB : Nouveau message : $sujetMes";
 // \n = retour à la ligne
 // $contenu = "Vous avez recu un e-mail depuis votre site.\n";
 // $contenu .= "Nom: $nom \n";
