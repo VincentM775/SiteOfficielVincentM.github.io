@@ -20,7 +20,7 @@
               <a class="textNav" href="/accueil.html#formations">Formations</a>
               <a class="textNav" href="/accueil.html#experiences">Expériences</a>
               <a class="textNav" href="/accueil.html#centreInteret">Centres d'intérêt</a>
-              <a class="textNav" href="/contact.html">Contact</a>
+              <a class="textNav" href="/contact.php">Contact</a>
 
         </nav>
     </header>
@@ -35,13 +35,14 @@
         <section id="section2">
             
             <article>
-                <form action="">
+                <?php include('./envoi.php');?>
+                <form method="POST">
                     <h2 class="titreRubrique">Formulaire</h2>
                     <div id="all_input">
                         <div class="field" id="fieldNom">
                             <label class="label">Nom :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input id="formNom" class="input is-danger" type="text" placeholder="Exemple : Matias"required>
+                                <input name="lastname" id="formNom" class="input is-danger" type="text" placeholder="Exemple : Matias"required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                 </span>
@@ -55,7 +56,7 @@
                         <div class="field" id="fieldPrenom">
                             <label class="label">Prénom :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input id="formPrenom" class="input is-danger" type="text" placeholder="Exemple : Vincent"required>
+                                <input name="firstname" id="formPrenom" class="input is-danger" type="text" placeholder="Exemple : Vincent"required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                 </span>
@@ -69,7 +70,7 @@
                         <div class="field" id="fieldEmail">
                             <label class="label">Email :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input id="formEmail" class="input is-danger" type="email" placeholder="Exemple : vincentmts77@gmail.com" required >
+                                <input name="email" id="formEmail" class="input is-danger" type="email" placeholder="Exemple : vincentmts77@gmail.com" required >
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-envelope"></i>
                                 </span>
@@ -83,7 +84,7 @@
                         <div class="field" id="fieldSujet">
                             <label class="label">Sujet :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input id="formSujet" class="input is-danger" type="text" placeholder="Exemple : Recrutement alternance" required>
+                                <input name="subject" id="formSujet" class="input is-danger" type="text" placeholder="Exemple : Recrutement alternance" required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-envelope"></i>
                                 </span>
@@ -97,7 +98,7 @@
                         <div class="field" id="fieldMessage">
                             <label class="label">Message :</label>
                             <div class="control">
-                                <textarea id="formMessage" class="textarea" 
+                                <textarea name="message" id="formMessage" class="textarea" 
                                 placeholder="Exemple : Bonjour,
 je suis recruteur et je suis intéresser par votre profil.
 Recontacter moi pour un entretient.
