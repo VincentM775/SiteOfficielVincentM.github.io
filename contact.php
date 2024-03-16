@@ -108,7 +108,7 @@ Cordialement" required></textarea>
 
                         <div class="field is-grouped">
                             <div class="control">
-                                <button class="button is-link">Submit</button>
+                                <input class="button is-link" type="submit" name="submit" id="submit" value="Envoyer">
                             </div>
                         </div>
                     </div>
