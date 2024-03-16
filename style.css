@@ -1,3 +1,6 @@
+html{
+    background-color: #0a1628 !important;
+}
 body{
     margin: 0;
     padding: 0;
@@ -5,6 +8,7 @@ body{
     font-family:monospace;
 }
 .fondFlou{
+    transition: 0.5s;
     position: fixed;
     backdrop-filter: blur(15px);
     top: 0;
@@ -18,7 +22,7 @@ body{
     padding: 0px 20px 0px 20px;
     font-size: 22px;
     box-shadow: 0px 0px 5px rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2)!important;
 }
 #titreHeader{
     margin: 0;
@@ -46,6 +50,7 @@ section{
     width: 100%;
 }
 footer{
+    font-family: monospace !important;
     color: white;
     text-align: center;
     font-size: 17px;
