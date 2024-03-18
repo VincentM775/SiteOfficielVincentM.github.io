@@ -64,6 +64,35 @@ document.querySelector('#all_input').querySelectorAll('.input').forEach((input) 
     })
 })
 
+document.querySelectorAll('.textarea').forEach((textarea) => {
+    textarea.addEventListener('input', function() {
+        let value = textarea.value;
+
+        if (value !== '' && value !== null && value !== undefined){
+            textarea.classList.remove('is-danger');
+            textarea.classList.add('is-success');
+        } else {
+            textarea.classList.remove('is-success');
+            textarea.classList.add('is-danger');
+        }
+
+        let parentElement = textarea.closest('.field');
+        let helpElement = parentElement.querySelector('.help');
+
+        if (textarea.classList.contains('is-danger')) {
+            helpElement.textContent = 'Ce champ est obligatoire';
+            helpElement.classList.remove('is-success');
+            helpElement.classList.add('is-danger');
+        } else {
+            helpElement.textContent = '';
+            helpElement.classList.remove('is-danger');
+            helpElement.classList.add('is-success');
+        }
+    });
+});
+
+
+
 /*Code pour vérifier si tout les champs sont bien compléter */
 function validateForm() {
     let nom = document.getElementById("name").value;

@@ -26,6 +26,9 @@
     z-index: 1;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
 }
+header{
+    box-sizing: unset!important;
+}
 #titreExplicative{
     margin-top: 50px;
     display: flex;
@@ -87,4 +90,9 @@ form{
 }
 input::placeholder,textarea::placeholder{
     color: rgba(0, 0, 0, 0.45)!important;
+}
+p{
+    font-size: 100%;
+    font-weight: 400;
+    font-family: monospace !important;
 }
