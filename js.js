@@ -63,3 +63,51 @@ document.querySelector('#all_input').querySelectorAll('.input').forEach((input) 
         }
     })
 })
+
+/*Code pour vérifier si tout les champs sont bien compléter */
+function validateForm() {
+    let nom = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let sujet = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    if (nom.trim() === '' || email.trim() === '' || sujet.trim() === '' || message.trim() === '') {
+        alert("Veuillez remplir tous les champs du formulaire.");
+        return false;
+    }
+
+    return true;
+}
+/*Code pour l'envoi du mail : */
+function sendMail(){
+    if (!validateForm()) {
+        return;
+    }
+    var params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value,
+    }
+    console.log();
+    const serviceID = "service_o4au2ta";
+    const templateID = "template_u0x9lwc";
+    
+    emailjs
+        .send(serviceID,templateID,params)
+        .then((res) =>{
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("subject").value = "";
+            document.getElementById("message").value = "";
+            console.log(res);
+            alert("Le message a été envoyer avec succès !")
+        })
+        .catch((err)=> {
+            console.log(err);
+            alert("Erreur : l'envoie n'a pas fonctionner.");
+        });
+}
+document.getElementById("monFormulaire").addEventListener("submit", function(event){
+    event.preventDefault(); // Empêche le comportement par défaut du formulaire
+})

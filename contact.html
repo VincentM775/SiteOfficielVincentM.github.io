@@ -9,7 +9,16 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
+    <script src="js.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("groWF8qH7ebbU_rR1");
+      })();
+    </script>
 </head>
 <body>
     <script src="https://kit.fontawesome.com/99674c63ee.js" crossorigin="anonymous"></script>
@@ -21,7 +30,7 @@
               <a class="textNav" href="/accueil.html#formations">Formations</a>
               <a class="textNav" href="/accueil.html#experiences">Expériences</a>
               <a class="textNav" href="/accueil.html#centreInteret">Centres d'intérêt</a>
-              <a class="textNav" href="/contact.php">Contact</a>
+              <a class="textNav" href="/contact.html">Contact</a>
 
         </nav>
     </header>
@@ -36,28 +45,13 @@
         <section id="section2">
             
             <article>
-                <?php include('./envoi.php');?>
-                <form method="POST">
+                <form id="monFormulaire">
                     <h2 class="titreRubrique">Formulaire</h2>
                     <div id="all_input">
                         <div class="field" id="fieldNom">
-                            <label class="label">Nom :</label>
+                            <label class="label">Nom et prénom :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input name="nom" id="formNom" class="input is-danger" type="text" placeholder="Exemple : Matias"required>
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-user"></i>
-                                </span>
-                                <span class="icon is-small is-right">
-                                    <i class="fas fas fa-exclamation-triangle"></i>
-                                </span>
-                            </div>
-                            <p class="help is-danger">Ce champ est obligatoire</p>
-                        </div>
-                        
-                        <div class="field" id="fieldPrenom">
-                            <label class="label">Prénom :</label>
-                            <div class="control has-icons-left has-icons-right">
-                                <input name="prenom" id="formPrenom" class="input is-danger" type="text" placeholder="Exemple : Vincent"required>
+                                <input name="nom" id="name" class="input is-danger" type="text" placeholder="Exemple : Matias"required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-user"></i>
                                 </span>
@@ -71,7 +65,7 @@
                         <div class="field" id="fieldEmail">
                             <label class="label">Email :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input name="email" id="formEmail" class="input is-danger" type="email" placeholder="Exemple : vincentmts77@gmail.com" required >
+                                <input name="email" id="email" class="input is-danger" type="email" placeholder="Exemple : vincentmts77@gmail.com" required >
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-envelope"></i>
                                 </span>
@@ -85,7 +79,7 @@
                         <div class="field" id="fieldSujet">
                             <label class="label">Sujet :</label>
                             <div class="control has-icons-left has-icons-right">
-                                <input name="sujet" id="formSujet" class="input is-danger" type="text" placeholder="Exemple : Recrutement alternance" required>
+                                <input name="sujet" id="subject" class="input is-danger" type="text" placeholder="Exemple : Recrutement alternance" required>
                                 <span class="icon is-small is-left">
                                     <i class="fas fa-envelope"></i>
                                 </span>
@@ -99,7 +93,7 @@
                         <div class="field" id="fieldMessage">
                             <label class="label">Message :</label>
                             <div class="control">
-                                <textarea name="message" id="formMessage" class="textarea" 
+                                <textarea name="message" id="message" class="textarea" 
                                 placeholder="Exemple : Bonjour,
 je suis recruteur et je suis intéresser par votre profil.
 Recontacter moi pour un entretient.
@@ -109,7 +103,7 @@ Cordialement" required></textarea>
 
                         <div class="field is-grouped">
                             <div class="control">
-                                <input class="button is-link" type="submit" name="submit" id="submit" value="Envoyer">
+                                <button onclick="sendMail()" class="button is-link" type="submit" name="submit">Envoyer</button>
                             </div>
                         </div>
                     </div>

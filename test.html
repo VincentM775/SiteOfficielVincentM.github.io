@@ -1,43 +1,64 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire d'envoi en PHP</title>
-</head>
-<body>
-  <h2>Formulaire de contact</h2>
-  <form id="myForm">
-    <label for="nom">Nom:</label>
-    <input type="text" id="nom" name="nom" required><br><br>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script src="test.js"></script>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-
-    <input type="submit" value="Envoyer">
-  </form>
-
-  <div id="messageStatus"></div>
-
-  <script>
-    document.getElementById("myForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Empêcher la soumission du formulaire par défaut
-      
-      var formData = new FormData(this); // Créer un objet FormData contenant les données du formulaire
-      
-      // Envoyer les données du formulaire à traitement.php via AJAX
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", "envoi.php", true);
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          document.getElementById("messageStatus").textContent = xhr.responseText;
-        }
-      };
-      xhr.send(formData);
-    });
-  </script>
-</body>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("groWF8qH7ebbU_rR1");
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="container border mt-3 bg-light">
+      <div class="row">
+        <div class="col-md-6 p-5 bg-primary text-white">
+          <h1>Hi there!</h1>
+          <h4>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo,
+          </h4>
+        </div>
+        <div class="col-md-6 border-left py-3">
+          <h1>Contact form</h1>
+          <div class="form-group">
+            <h5 for="name">Name</h5>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="email">Email</h5>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="message">Message</h5>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
