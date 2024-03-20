@@ -140,3 +140,4 @@ function sendMail(){
 document.getElementById("monFormulaire").addEventListener("submit", function(event){
     event.preventDefault(); // Empêche le comportement par défaut du formulaire
 })
+
